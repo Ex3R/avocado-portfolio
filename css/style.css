@@ -80,7 +80,7 @@ section {
     padding: 0 1rem;
 }
 
-.navbar .nav a:hover {
+a:hover {
     color: #555;
 }
 
@@ -157,7 +157,7 @@ section {
 .section-c .team .team-item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
+    grid-gap: 1rem;
 }
 
 .section-c .team .team-item .team-item-description {
@@ -172,7 +172,6 @@ section {
 }
 
 /* What we are doing and contact form */
-
 .section-d p {
     /* margin: 1.25rem 0; */
     font-size: 1rem;
@@ -209,17 +208,16 @@ section {
     justify-content: center;
 }
 
-.section-d .grid-container .contact-form-container p {
+.section-d .grid-container .contact-form-container a {
     color: var(--primary-color);
-    font-size: 1.7rem;
-    line-height: 2.2rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 
 
 /* Project CARD */
 .section-project {
     margin-top: 7rem;
-    /* min-height: 100vh; */
 }
 
 .section-project .back {
@@ -313,6 +311,14 @@ section {
 
 
 
+/* Avatar */
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
 
 /* Text utilities */
 .heading-bold {
@@ -377,7 +383,8 @@ section .subtitle {
     }
 
     .section-c .team .team-item {
-
+        display: flex;
+        text-align: center;
         grid-template-columns: repeat(1, 1fr);
 
     }
@@ -414,6 +421,10 @@ section .subtitle {
 }
 
 @media (max-width: 800px) {
+
+    section {
+        margin: 7rem 0;
+    }
 
     .subtitle {
         text-align: center;
@@ -479,6 +490,11 @@ section .subtitle {
 
     .section-b .projects {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .section-c .team {
+        justify-content: center;
     }
 
     .section-c .team {
@@ -548,6 +564,20 @@ section .subtitle {
     }
 
 
+}
+
+@media (max-width: 600px) {
+    .section-c .team .team-item {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .section-c p {
+        margin-top: 1rem;
+    }
 }
 
 
