@@ -176,6 +176,23 @@
                 >Подробнее о кейсе Leroy Merlin</a
               >
             </div>
+
+            <div class="project">
+              <a href="/project-page-moodcolor.html">
+                <img src="images/projects/moodcolor.png" alt=""
+              /></a>
+              <p>
+                <span class="heading-bold">Цвет Настроения ❤️</span> - событийно
+                - оринтированный сервис для тебя
+              </p>
+              <p>
+                Придумали адаптивный дизайн и выполнили разработку с акцентом на
+                мобильные устройства.
+              </p>
+              <a class="underline link" href="/project-page-moodcolor.html"
+                >Подробнее о Цвете Настроения</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -240,6 +257,29 @@
       </div>
     </section>
 
+    <!-- Location -->
+    <section class="section-location-2">
+      <div class="container">
+        <p class="subtitle">From Russia with love</p>
+        <h2 class="title">Где мы находимся?</h2>
+        <div class="grid-container">
+          <div class="location-description">
+            <p>
+              Придумали адаптивный дизайн и выполнили разработку с акцентом на
+              мобильные устройства. Придумали адаптивный дизайн и выполнили
+              разработку с акцентом на мобильные устройства.Придумали адаптивный
+              дизайн и выполнили разработку с акцентом на мобильные устройства.
+            </p>
+          </div>
+
+          <div class="location-map" id="map"></div>
+          <div class="location-image">
+            <img src="/images/location/academ.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- What we are doing and cotact form -->
     <section class="section-d">
       <div class="container">
@@ -265,6 +305,20 @@
       </div>
     </section>
 
+    <script>
+      function initMap() {
+        var nsu = { lat: 54.847463, lng: 83.093846 };
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: nsu,
+        });
+        var marker = new google.maps.Marker({ position: nsu, map: map });
+      }
+    </script>
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOzJll3LR6MRXc2SS_NYOWUz7gumWPC00&callback=initMap"
+    ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
